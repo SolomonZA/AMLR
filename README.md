@@ -21,7 +21,7 @@ It is possible to depict the RNN as a deep feedforward network. This conceptual 
 
 The [image](https://en.wikipedia.org/wiki/Recurrent_neural_network "RNN - Wikipedia") below graphically depicts the process.
 
-![alt text](https://github.com/SolomonZA/AMLR/tree/master/img/rnn_unrolled.png "Logo Title Text 1")
+![alt text](https://github.com/SolomonZA/AMLR/blob/master/img/rnn_unrolled.png "Logo Title Text 1")
 
 
 
