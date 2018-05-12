@@ -13,5 +13,5 @@ In addition, some work on machine learning interpretability will also be include
 # Pure Python (NumPy) Recurrent Neural Network
 ---
 
-
+![alt text](https://github.com/SolomonZA/AMLR/rnn_unrolled.png "Logo Title Text 1")
 
