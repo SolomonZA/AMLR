@@ -29,7 +29,7 @@ For a more numerical explanation, this image from Andrej Karpathy's [blog](http:
 
 The rectangles represent vectors and the arrows weight matrices. Red arrows map from the input layer to the hidden layer, green arrows show the mapping from the previous hidden layer (state) to the current, and the blue arrows depict the mapping from the hidden layer to the output layer.
 
-The start of the sequence is "h" at "time step" **t**, the [1 0 0 0] vector representing this first character is mapped to the hidden layer resulting in a certain activation, and then to both 1) the "next" time step's hidden layer, and 2)the output layer, with different weight matrices, the latter's mapping showing a high probability of "e" being the *next character*.
+The start of the sequence is "h" at "time step" **t**, the [1 0 0 0] vector representing this first character is mapped to the hidden layer resulting in a certain activation, and then to both 1) the "next" time step's hidden layer, and 2) the output layer, with different weight matrices, the latter's mapping showing a high probability of "e" being the *next character*.
 
 The second character of the sequence is indeed "e" at time step **t+1**, and this follows a similar process as with "h". However, at the hidden layer, the output of the previous time step's hidden layer is now taken into account at this time step **t+1**.
 
@@ -43,4 +43,12 @@ Keras is a user-friendly and modular neural network library written in Python. I
 
 In contrast to the Pure NumPy RNN, this implementation is more of a "black box", as it utilises several built in functions and classes from the Keras toolkit, to define the various components of the neural network. This includes the various layers, the LSTM nodes, and the model fitting/training process as well. This will therefore not serve the purpose of fundamentally understanding the nuances of an LSTM compared to either feedforward networks or RNNs - a later guide will. 
 
-The Long short-term memory (LSTM) unit is a component of a recurrent neural network. 
+The Long short-term memory (LSTM) unit is a component of a recurrent neural network. It's primary contribution to RNNs is that it expands an RNN's capability to model input sequences in which there may be significant lags between important events. It does so by addressing the "vanishing gradient" problem.
+
+A typical example cited, including by Martin Gorner, is of an input  paragraph of text that contains the phrase "I was born in Paris, France," at the beginning, then continues on with various pieces of unrelated (unimportant) information pertaining to the author and others, including "My dog's name is Bingo" as the penultimate sentence.. The paragraph then ends with "I speak..." and the task at hand is for the model to predict the word "French", based on
+
+The problem arises because the important phrase, "I was born in Paris, France" is much further away from the target, than is "My dog's name is Bingo", which is a much less important phrase. The gradients which would have connected this important phrase to the target, are far back and have been reduced to near-0 values through training iterations.
+
+LSTM's address this problem with the following innovations:
+
+### Gates
