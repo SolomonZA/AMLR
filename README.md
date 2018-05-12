@@ -13,5 +13,9 @@ In addition, some work on machine learning interpretability will also be include
 # Pure Python (NumPy) Recurrent Neural Network
 ---
 
+The Pure Python (NumPy) Recurrent Neural Network (from now on Pure RNN) is a "fully recurrent" RNN.
+
+The [image](https://en.wikipedia.org/wiki/Recurrent_neural_network "RNN - Wikipedia") graphically depicts the process.
+
 ![alt text](https://github.com/SolomonZA/AMLR/blob/master/rnn_unrolled.png "Logo Title Text 1")
 
