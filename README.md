@@ -17,9 +17,11 @@ The Pure Python (NumPy) Recurrent Neural Network (from now on Pure RNN) is a "fu
 
 The primary distinction between RNNs and traditional feedforward neural networks, is that RNNs exhibit temporal dynamic behaviour. It generates a **hidden state** which contains information about all prior inputs. This makes RNNs useful for modelling sequential processes such as **speech recognition** or **text prediction**.
 
-It is possible to depict the RNN as a deep feedforward network. This conceptual exercise is known as "unrolling" or "unfolding" and it involves each time step explicitly, illustrating that the hidden state at time step *t* is a function of both the inputs $x_t$ at time step *t* and the hidden state $h_{t-1}$ of the previous time step.
+It is possible to depict the RNN as a deep feedforward network. This conceptual exercise is known as "unrolling" or "unfolding" and it involves each time step explicitly, illustrating that the hidden state at time step *t* is a function of both the inputs *x_t* at time step *t* and the hidden state *h_{t-1}* of the previous time step.
 
 The [image](https://en.wikipedia.org/wiki/Recurrent_neural_network "RNN - Wikipedia") below graphically depicts the process.
 
 ![alt text](https://github.com/SolomonZA/AMLR/blob/master/rnn_unrolled.png "Logo Title Text 1")
+
+
 
