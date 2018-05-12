@@ -13,7 +13,7 @@ In addition, some work on machine learning interpretability will also be include
 # Pure Python (NumPy) Recurrent Neural Network
 ---
 
-The Pure Python (NumPy) Recurrent Neural Network (from now on Pure RNN) is a "fully recurrent" RNN.
+The Pure Python (NumPy) Recurrent Neural Network (from now on Pure RNN) is a "fully recurrent" RNN. It uses only the NumPy library and is thus a highly transaprent "whitebox" implementation.
 
 The primary distinction between RNNs and traditional feedforward neural networks, is that RNNs exhibit temporal dynamic behaviour. It generates a **hidden state** which contains information about all prior inputs. This makes RNNs useful for modelling sequential processes such as **speech recognition** or **text prediction**.
 
@@ -36,3 +36,11 @@ The second character of the sequence is indeed "e" at time step **t+1**, and thi
 The hidden layer then maps these activations to the output layer. The output vector, indicating a strong probability for "l", can be interpreted roughly as the following:
 
 *Conditional on the previous (time step **t**) character having been an "h", the current character input (time step **t+1**) being an "e" suggests a high probability that the output, or following character (time step **t+2**) will be an "l".*
+
+# Long short-term Memory Keras Implementation
+
+Keras is a user-friendly and modular neural network library written in Python. It can use as backend various deep learning architectures, including TensorFlow an Theano. It is very useful for rapid prototyping of neural network models, particularly if your goal is to quickly determine whether your dataset or problem is amenable to a neural network based model.
+
+In contrast to the Pure NumPy RNN, this implementation is more of a "black box", as it utilises several built in functions and classes from the Keras toolkit, to define the various components of the neural network. This includes the various layers, the LSTM nodes, and the model fitting/training process as well. This will therefore not serve the purpose of fundamentally understanding the nuances of an LSTM compared to either feedforward networks or RNNs - a later guide will. 
+
+The Long short-term memory (LSTM) unit is a component of a recurrent neural network. 
