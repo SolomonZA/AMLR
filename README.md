@@ -8,3 +8,5 @@ The models are primarily neural networks.
 
 The domain of these models are natural language processing tasks, such as next-character prediction.
 
+In addition, some work on machine learning interpretability will also be included in this repo.
+
