@@ -23,5 +23,6 @@ The [image](https://en.wikipedia.org/wiki/Recurrent_neural_network "RNN - Wikipe
 
 ![alt text](https://github.com/SolomonZA/AMLR/blob/master/img/rnn_unrolled.png "Logo Title Text 1")
 
+For a more numerical explanation, this image from Andrej Karpathy's [blog](http://karpathy.github.io/2015/05/21/rnn-effectiveness/ "Unreasonable Effectiveness of RNNs") is quite intuitive.
 
-
+![alt text](https://github.com/SolomonZA/AMLR/blob/master/img/rnn_unrolled_1.jpeg "Unrolled RNN")
