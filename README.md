@@ -35,4 +35,4 @@ The second character of the sequence is indeed "e" at time step **t+1**, and thi
 
 The hidden layer then maps these activations to the output layer. The output vector, indicating a strong probability for "l", can be interpreted roughly as the following:
 
-*Conditional on the previous (time step **t**) character having been an "h", the current character input (time step **t+1**) being an "e" suggests a high probability that the output, or following character (time step **t+2**) will be an "l".
+*Conditional on the previous (time step **t**) character having been an "h", the current character input (time step **t+1**) being an "e" suggests a high probability that the output, or following character (time step **t+2**) will be an "l".*
