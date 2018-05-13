@@ -62,8 +62,19 @@ LSTM's address this problem with the following innovations:
 
 ### Gates and Cells
 
-**Cells** are responsible for memory over irregular and long periods of time. Information about previous observations are stored in the cell state. The network can add or remove information from the cell state through devices that permit selective input or modification of the cell state.
+**Cells** are responsible for memory retention over irregular and long periods of time. Information about previous observations are stored in the cell state. The network can add or remove information from the cell state through devices that permit selective input or modification of the cell state.
 
-Gates serving various purposes play an important role in LSTM models. These gates are **forget gates**, **input gates**, and **output gates** and can be thought of *regulators* of the flow of information through the LSTM.
+Mathematically, the cell state at a time step **t** is a function of the cell state of the previous time step **t-1** as well as a product involving the *input gate* and a TanH activation of the input, previous hidden state and a bias.
 
-**Forget gate**: The first decision made by the module is what will be discarded from the cell state.
+Gates serving various purposes play an important role in LSTM models. These gates are **forget gates**, **input gates**, and **output gates** and can be thought of as *regulators* of the flow of information through the LSTM.
+
+**Forget gate**: The first decision made by the module is determine what will be discarded from the cell state. The sigmoid operation, indicated by the *sigma* symbol, outputs a value between 1 and 0, with a 0 indicating "forget all" and a 1 indicating "keep all".
+
+**Input gate**: The LSTM then needs to determine what new information will be stored in the cell state.  The first component of this cell state update involves the input gate. A sigmoid activation produces this gate's output, also a function of the current inputs and the previous hidden state, and a bias.
+
+The second part of the cell state update involves a TanH activation of the previous time step's hidden state and current state's inputs, the output of which is then combined with the output of the input gate.
+
+**Output gate**: The final gated flow occurs through the output gate. The output is a filtered version of the cell state. It is another sigmoid activation of the inputs of the current time step and the hidden state of the previous time step.
+
+Finally, the new hidden state is composed of a TanH activation of the new cell state, and the output from the output gate.
+
