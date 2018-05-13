@@ -45,13 +45,13 @@ In contrast to the Pure NumPy RNN, this implementation is more of a "black box",
 
 The Long short-term memory (LSTM) unit is a component of a recurrent neural network. It's primary contribution to RNNs is that it expands an RNN's capability to model input sequences in which there may be significant lags between important events. It does so by addressing the "vanishing gradient" problem.
 
-A typical example cited, including by Martin Gorner, is of an input  paragraph of text that contains the phrase "I was born in Paris, France," at the beginning, then continues on with various pieces of unrelated (unimportant) information pertaining to the author and others, including "My dog's name is Bingo" as the penultimate sentence.. The paragraph then ends with "I speak..." and the task at hand is for the model to predict the word "French", based on
+A typical example cited, including by Martin Gorner, is of an input  paragraph of text that contains the phrase "I was born in Paris, France," at the beginning, then continues on with various pieces of unrelated (unimportant) information pertaining to the author and others, including "My dog's name is Bingo" as the penultimate sentence. The paragraph then ends with "I speak..." and the task at hand is for the model to predict the word "French", based on the author's first words indicating his French birthplace.
 
 The problem arises because the important phrase, "I was born in Paris, France" is much further away from the target, than is "My dog's name is Bingo", which is a much less important phrase. The gradients which would have connected this important phrase to the target, are far back and have been reduced to near-0 values through training iterations.
 
 This diagram below from [colah's blog](http://colah.github.io/posts/2015-08-Understanding-LSTMs/ "LSTM Module") illustrates the LSTM module.
 
-![alt text](https://github.com/SolomonZA/AMLR/blob/master/img/lstm.png =745x280 "LSTM Module")
+<img src="https://github.com/SolomonZA/AMLR/blob/master/img/lstm.png" alt="LSTM Module" width="745" height ="280" />
 
 LSTM's address this problem with the following innovations:
 
