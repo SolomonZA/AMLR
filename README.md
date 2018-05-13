@@ -60,7 +60,10 @@ The working of this module is described by the following set of equations:
 
 LSTM's address this problem with the following innovations:
 
-### Gates
+### Gates and Cells
 
-Gates serving various purposes play an important role in LSTM models. These gates are **forget gates**, **input gates**, and **output gates** and can be thought of *regulators* of the flow of information through the LSTM. **Cells**, the other key component of an LSTM unit, is responsible for memory over irregular and long periods of time.
+**Cells** are responsible for memory over irregular and long periods of time. Information about previous observations are stored in the cell state. The network can add or remove information from the cell state through devices that permit selective input or modification of the cell state.
 
+Gates serving various purposes play an important role in LSTM models. These gates are **forget gates**, **input gates**, and **output gates** and can be thought of *regulators* of the flow of information through the LSTM.
+
+**Forget gate**: The first decision made by the module is what will be discarded from the cell state.
