@@ -54,8 +54,9 @@ This diagram below from [colah's blog](http://colah.github.io/posts/2015-08-Unde
 <img src="https://github.com/SolomonZA/AMLR/blob/master/img/lstm.png" alt="LSTM Module" width="745" height ="280" />
 
 The working of this module is described by the following set of equations:
-
-<img src="https://github.com/SolomonZA/AMLR/blob/master/img/lstm_eq.png" alt="LSTM Equations"  />
+<p align = 'center'>
+	<img src="https://github.com/SolomonZA/AMLR/blob/master/img/lstm_eq.png" alt="LSTM Equations"  />
+</p>
 
 LSTM's address this problem with the following innovations:
 
