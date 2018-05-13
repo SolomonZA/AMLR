@@ -17,7 +17,7 @@ The Pure Python (NumPy) Recurrent Neural Network (from now on Pure RNN) is a "fu
 
 The primary distinction between RNNs and traditional feedforward neural networks, is that RNNs exhibit temporal dynamic behaviour. It generates a **hidden state** which contains information about all prior inputs. This makes RNNs useful for modelling sequential processes such as **speech recognition** or **text prediction**.
 
-It is possible to depict the RNN as a deep feedforward network. This conceptual exercise is known as "unrolling" or "unfolding" and it involves each time step explicitly, illustrating that the hidden state at time step *t* is a function of both the inputs *x_t* at time step *t* and the hidden state *h_{t-1}* of the previous time step.
+It is possible to depict the RNN as a deep feedforward network. This conceptual exercise is known as "unrolling" or "unfolding" and it involves showing each time step explicitly, illustrating that the hidden state at time step *t* is a function of both the inputs *x_t* at time step *t* and the hidden state *h_{t-1}* of the previous time step.
 
 The [image](https://en.wikipedia.org/wiki/Recurrent_neural_network "RNN - Wikipedia") below graphically depicts the process.
 
@@ -53,7 +53,13 @@ This diagram below from [colah's blog](http://colah.github.io/posts/2015-08-Unde
 
 <img src="https://github.com/SolomonZA/AMLR/blob/master/img/lstm.png" alt="LSTM Module" width="745" height ="280" />
 
+The working of this module is described by the following set of equations:
+
+<img src="https://github.com/SolomonZA/AMLR/blob/master/img/lstm_eq.png" alt="LSTM Equations"  />
+
 LSTM's address this problem with the following innovations:
 
 ### Gates
+
+Gates serving various purposes play an important role in LSTM models. These gates are **forget gates**, **input gates**, and **output gates** and can be thought of *regulators* of the flow of information through the LSTM. **Cells**, the other key component of an LSTM unit, is responsible for memory over irregular and long periods of time.
 
