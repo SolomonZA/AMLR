@@ -49,6 +49,11 @@ A typical example cited, including by Martin Gorner, is of an input  paragraph o
 
 The problem arises because the important phrase, "I was born in Paris, France" is much further away from the target, than is "My dog's name is Bingo", which is a much less important phrase. The gradients which would have connected this important phrase to the target, are far back and have been reduced to near-0 values through training iterations.
 
+This diagram below from [colah's blog](http://colah.github.io/posts/2015-08-Understanding-LSTMs/ "LSTM Module") illustrates the LSTM module.
+
+![alt text](https://github.com/SolomonZA/AMLR/blob/master/img/lstm.png =745x280 "LSTM Module")
+
 LSTM's address this problem with the following innovations:
 
 ### Gates
+
